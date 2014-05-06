@@ -5,7 +5,7 @@
 <!-- original from  http://www.htmq.com/canvas/beginPath.shtml -->
 <title>canvasで図形を描く</title>
 <script>
-function test() {
+window.onload = function () {
   //描画コンテキストの取得
   var canvas = document.getElementById('sample');
   if (canvas.getContext) {
@@ -26,7 +26,7 @@ function test() {
 }
 </script>
 </head>
-<body onLoad="test()">
+<body>
 <h2>Canvasで図形を描く</h2>
 <canvas width="300" height="150" id="sample" style="background-color:yellow;">
 canvas is not supported
