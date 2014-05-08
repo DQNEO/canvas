@@ -22,16 +22,17 @@ function draw(ctx) {
   ctx.stroke();
 
   //対角線
-  ctx.moveTo(centerX, centerY - 2 * unit);
-  ctx.lineTo(centerX ,2 * unit + centerY);
+  var diagonalUnit = unit * 1.0;
+  ctx.moveTo(centerX, centerY - 2 * diagonalUnit);
+  ctx.lineTo(centerX ,2 * diagonalUnit + centerY);
   ctx.stroke();
 
-  ctx.moveTo(centerX + unit * root3, centerY - unit);
-  ctx.lineTo(centerX - unit * root3, centerY + unit);
+  ctx.moveTo(centerX + diagonalUnit * root3, centerY - diagonalUnit);
+  ctx.lineTo(centerX - diagonalUnit * root3, centerY + diagonalUnit);
   ctx.stroke();
 
-  ctx.moveTo(centerX - unit * root3, centerY - unit);
-  ctx.lineTo(centerX + unit * root3, centerY + unit);
+  ctx.moveTo(centerX - diagonalUnit * root3, centerY - diagonalUnit);
+  ctx.lineTo(centerX + diagonalUnit * root3, centerY + diagonalUnit);
   ctx.stroke();
 }
 
