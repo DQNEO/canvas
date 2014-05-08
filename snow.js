@@ -11,13 +11,13 @@ var root3 = 1.73205;
 function draw(ctx) {
 
   //輪郭
-  ctx.moveTo(centerX,  0);
+  ctx.moveTo(centerX,  baseY);
   ctx.lineTo(centerX + unit * root3, baseY + unit);
   ctx.lineTo(centerX + unit * root3, baseY + 3 * unit);
   ctx.lineTo(centerX, baseY + 4 * unit);
   ctx.lineTo(centerX - unit * root3, baseY + 3 * unit);
   ctx.lineTo(centerX - unit * root3, baseY + unit);
-  ctx.lineTo(centerX,   0);
+  ctx.lineTo(centerX,   baseY);
   ctx.strokeStyle = "rgb(100,100,255)";
   ctx.stroke();
 
