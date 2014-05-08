@@ -5,34 +5,33 @@ var canvasHeight = 600;
 var unit = (canvasHeight / 4) * 0.8;
 var centerX = canvasWith / 2;
 var centerY = canvasHeight / 2;
-var baseY = centerY - unit * 2;
 var root3 = 1.73205;
 
 function draw(ctx) {
 
   //輪郭
   
-  ctx.moveTo(centerX,  baseY);
-  ctx.lineTo(centerX + unit * root3, baseY + unit);
-  ctx.lineTo(centerX + unit * root3, baseY + 3 * unit);
-  ctx.lineTo(centerX, baseY + 4 * unit);
-  ctx.lineTo(centerX - unit * root3, baseY + 3 * unit);
-  ctx.lineTo(centerX - unit * root3, baseY + unit);
-  ctx.lineTo(centerX,   baseY);
+  ctx.moveTo(centerX,  centerY - unit * 2);
+  ctx.lineTo(centerX + unit * root3, centerY - unit * 2 + unit);
+  ctx.lineTo(centerX + unit * root3, centerY - unit * 2 + 3 * unit);
+  ctx.lineTo(centerX, centerY - unit * 2 + 4 * unit);
+  ctx.lineTo(centerX - unit * root3, centerY - unit * 2 + 3 * unit);
+  ctx.lineTo(centerX - unit * root3, centerY - unit * 2 + unit);
+  ctx.lineTo(centerX,   centerY - unit * 2);
   ctx.strokeStyle = "rgb(100,100,255)";
   ctx.stroke();
 
   //対角線
-  ctx.moveTo(centerX, baseY);
-  ctx.lineTo(centerX ,unit * 4 + baseY);
+  ctx.moveTo(centerX, centerY - unit * 2);
+  ctx.lineTo(centerX ,unit * 4 + centerY - unit * 2);
   ctx.stroke();
 
-  ctx.moveTo(centerX + unit * root3, baseY + unit);
-  ctx.lineTo(centerX - unit * root3, baseY + unit * 3);
+  ctx.moveTo(centerX + unit * root3, centerY - unit * 2 + unit);
+  ctx.lineTo(centerX - unit * root3, centerY - unit * 2 + unit * 3);
   ctx.stroke();
 
-  ctx.moveTo(centerX - unit * root3, baseY + unit);
-  ctx.lineTo(centerX + unit * root3, baseY + unit * 3);
+  ctx.moveTo(centerX - unit * root3, centerY - unit * 2 + unit);
+  ctx.lineTo(centerX + unit * root3, centerY - unit * 2 + unit * 3);
   ctx.stroke();
 }
 
