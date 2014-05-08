@@ -61,7 +61,7 @@ var loop = function(ctx, fps) {
     theta = 0;
   }
 
-  setTimeout(function(){loop(ctx,fps);}, fps.getInterval());
+  //setTimeout(function(){loop(ctx,fps);}, fps.getInterval());
 };
 
 var FPS = function(target) {
