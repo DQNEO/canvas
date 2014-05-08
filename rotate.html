@@ -42,7 +42,6 @@ canvas {
         setTimeout(function(){loop(ctx,fps);}, fps.getInterval());
     };
 
-window.onload = function() {
     var FPS = function(target) {
         this.target     = target;        // 目標FPS
         this.interval   = 1000 / target; // setTimeoutに与えるインターバル
@@ -67,12 +66,13 @@ window.onload = function() {
         }
     };
 
+window.onload = function() {
+
     var canvas = document.getElementById('canvas');
     var ctx = canvas.getContext('2d');
 
     // 30FPSでアニメーション
     var fps = new FPS(30);
-
     loop(ctx,fps);
 };
 </script>
