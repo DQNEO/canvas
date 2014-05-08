@@ -11,13 +11,13 @@ function draw(ctx) {
 
   //輪郭
   
-  ctx.moveTo(centerX,  centerY - unit * 2);
-  ctx.lineTo(centerX + unit * root3, centerY - unit * 2 + unit);
-  ctx.lineTo(centerX + unit * root3, centerY - unit * 2 + 3 * unit);
-  ctx.lineTo(centerX, centerY - unit * 2 + 4 * unit);
-  ctx.lineTo(centerX - unit * root3, centerY - unit * 2 + 3 * unit);
-  ctx.lineTo(centerX - unit * root3, centerY - unit * 2 + unit);
-  ctx.lineTo(centerX,   centerY - unit * 2);
+  ctx.moveTo(centerX,  centerY - 2 * unit);
+  ctx.lineTo(centerX + unit * root3, centerY - unit);
+  ctx.lineTo(centerX + unit * root3, centerY + unit);
+  ctx.lineTo(centerX, centerY + unit * 2);
+  ctx.lineTo(centerX - unit * root3, centerY + unit);
+  ctx.lineTo(centerX - unit * root3, centerY - unit);
+  ctx.lineTo(centerX,   centerY - 2 * unit);
   ctx.strokeStyle = "rgb(100,100,255)";
   ctx.stroke();
 
