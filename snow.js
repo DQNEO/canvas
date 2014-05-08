@@ -1,4 +1,23 @@
 var theta = 0.0;
+function draw(ctx) {
+
+  var unit = 100;
+  var baseX = 300;
+  var baseY = 0;
+  var root3 = 1.73205
+  ctx.moveTo(baseX,  0);
+  ctx.lineTo(baseX + unit * root3, baseY + unit);
+  ctx.lineTo(baseX + unit * root3, baseY + 3 * unit);
+  ctx.lineTo(baseX, baseY + 4 * unit);
+
+  ctx.lineTo(baseX - unit * root3, baseY + 3 * unit);
+  ctx.lineTo(baseX - unit * root3, baseY + unit);
+  ctx.lineTo(baseX,   0);
+  ctx.strokeStyle = "rgb(100,100,255)";
+  ctx.stroke();
+
+}
+
 var loop = function(ctx, fps) {
     fps.check();
 
@@ -16,22 +35,7 @@ var loop = function(ctx, fps) {
     ctx.translate(canvas.width / 2, canvas.height / 2);
     ctx.rotate(theta);
     ctx.translate(-canvas.width / 2, -canvas.height / 2);
-
-  var unit = 100;
-  var baseX = 300;
-  var baseY = 0;
-  var root3 = 1.73205
-
-  ctx.moveTo(baseX,  0);
-  ctx.lineTo(baseX + unit * root3, baseY + unit);
-  ctx.lineTo(baseX + unit * root3, baseY + 3 * unit);
-  ctx.lineTo(baseX, baseY + 4 * unit);
-
-  ctx.lineTo(baseX - unit * root3, baseY + 3 * unit);
-  ctx.lineTo(baseX - unit * root3, baseY + unit);
-  ctx.lineTo(baseX,   0);
-  ctx.strokeStyle = "rgb(100,100,255)";
-  ctx.stroke();
+  draw(ctx);
 
     ctx.restore();
 
