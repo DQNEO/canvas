@@ -1,8 +1,8 @@
 var theta = 0.0;
 var canvasWith = 600;
-var canvasHeight = 400;
+var canvasHeight = 600;
 
-var unit = 100;
+var unit = canvasHeight / 4;
 var centerX = canvasWith / 2;
 var centerY = canvasHeight / 2;
 var baseY = 0;
