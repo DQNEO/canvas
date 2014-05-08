@@ -11,18 +11,11 @@ window.onload = function () {
   //描画コンテキストの取得
   var context = canvas.getContext('2d');
 
-  //新しいパスを開始する
   context.beginPath();
-
-  //パスの開始座標を指定する
   context.moveTo(100,100);
   context.lineTo(100,200);
-
-  //パスを閉じる
   context.closePath();
 
-  // http://www.htmq.com/canvas/strokeStyle.shtml
-  // set color of line
   context.strokeStyle = "rgb(100,100,255)";
 
   //現在のパスを輪郭表示する
