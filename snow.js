@@ -16,10 +16,17 @@ function draw(ctx) {
   ctx.strokeStyle = "rgb(100,100,255)";
   ctx.stroke();
 
+  ctx.moveTo(baseX, baseY);
+  ctx.lineTo(baseX ,unit * 4 + baseY);
+  ctx.stroke();
+
+  ctx.moveTo(baseX + unit * root3, baseY + unit);
+  ctx.lineTo(baseX - unit * root3, baseY + unit * 3);
+  ctx.stroke();
+
   ctx.moveTo(baseX - unit * root3, baseY + unit);
   ctx.lineTo(baseX + unit * root3, baseY + unit * 3);
   ctx.stroke();
-
 }
 
 var loop = function(ctx, fps) {
