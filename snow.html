@@ -5,56 +5,58 @@
 <title>canvasで図形を描く</title>
 <script>
 // original from  http://www.htmq.com/canvas/beginPath.shtml
+var canvas
 window.onload = function () {
-  var canvas = document.getElementById('sample');
+  canvas = document.getElementById('sample');
 
   //描画コンテキストの取得
-  var context = canvas.getContext('2d');
+  var ctx = canvas.getContext('2d');
 
   var unit = 100;
   var baseX = 300;
   var baseY = 0;
   var root3 = 1.73205
   //対角線
-  context.strokeStyle = "rgb(100,100,255)";
-  context.beginPath();
-  context.moveTo(baseX, baseY);
-  context.lineTo(baseX ,unit * 4 + baseY);
-  context.closePath();
-  context.stroke();
+  ctx.strokeStyle = "rgb(100,100,255)";
+  ctx.beginPath();
+  ctx.moveTo(baseX, baseY);
+  ctx.lineTo(baseX ,unit * 4 + baseY);
+  ctx.closePath();
+  ctx.stroke();
 
-  context.strokeStyle = "rgb(100,100,255)";
-  context.beginPath();
-  context.moveTo(baseX + unit * root3, baseY + unit);
-  context.lineTo(baseX - unit * root3, baseY + unit * 3);
-  context.closePath();
-  context.stroke();
+  ctx.strokeStyle = "rgb(100,100,255)";
+  ctx.beginPath();
+  ctx.moveTo(baseX + unit * root3, baseY + unit);
+  ctx.lineTo(baseX - unit * root3, baseY + unit * 3);
+  ctx.closePath();
+  ctx.stroke();
 
-  context.strokeStyle = "rgb(100,100,255)";
-  context.beginPath();
-  context.moveTo(baseX - unit * root3, baseY + unit);
-  context.lineTo(baseX + unit * root3, baseY + unit * 3);
-  context.closePath();
-  context.stroke();
+  ctx.strokeStyle = "rgb(100,100,255)";
+  ctx.beginPath();
+  ctx.moveTo(baseX - unit * root3, baseY + unit);
+  ctx.lineTo(baseX + unit * root3, baseY + unit * 3);
+  ctx.closePath();
+  ctx.stroke();
 
   //輪郭
-  context.beginPath();
-  context.moveTo(baseX,  0);
-  context.lineTo(baseX + unit * root3, baseY + unit);
-  context.lineTo(baseX + unit * root3, baseY + 3 * unit);
-  context.lineTo(baseX, baseY + 4 * unit);
+  ctx.beginPath();
 
-  context.lineTo(baseX - unit * root3, baseY + 3 * unit);
-  context.lineTo(baseX - unit * root3, baseY + unit);
-  context.lineTo(baseX,   0);
+  ctx.moveTo(baseX,  0);
+  ctx.lineTo(baseX + unit * root3, baseY + unit);
+  ctx.lineTo(baseX + unit * root3, baseY + 3 * unit);
+  ctx.lineTo(baseX, baseY + 4 * unit);
 
-  context.closePath();
+  ctx.lineTo(baseX - unit * root3, baseY + 3 * unit);
+  ctx.lineTo(baseX - unit * root3, baseY + unit);
+  ctx.lineTo(baseX,   0);
+
+  ctx.closePath();
 
 /*
 */
-  context.strokeStyle = "rgb(100,100,255)";
+  ctx.strokeStyle = "rgb(100,100,255)";
 
-  context.stroke();
+  ctx.stroke();
 }
 </script>
 </head>
