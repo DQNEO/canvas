@@ -39,14 +39,14 @@ window.onload = function () {
 
   //輪郭
   context.beginPath();
-  context.moveTo(300,  0);
-  context.lineTo(300 + 173, 100);
-  context.lineTo(300 + 173, 300);
-  context.lineTo(300, 400);
+  context.moveTo(baseX,  0);
+  context.lineTo(baseX + unit * root3, baseY + unit);
+  context.lineTo(baseX + unit * root3, baseY + 3 * unit);
+  context.lineTo(baseX, baseY + 4 * unit);
 
-  context.lineTo(300 -173, 300);
-  context.lineTo(300 -173, 100);
-  context.lineTo(300,   0);
+  context.lineTo(baseX - unit * root3, baseY + 3 * unit);
+  context.lineTo(baseX - unit * root3, baseY + unit);
+  context.lineTo(baseX,   0);
 
   context.closePath();
 
