@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>canvasで図形を描く</title>
+<script>
+// original from  http://www.htmq.com/canvas/beginPath.shtml
+window.onload = function () {
+  var canvas = document.getElementById('sample');
+
+  //描画コンテキストの取得
+  var context = canvas.getContext('2d');
+
+  //新しいパスを開始する
+  context.beginPath();
+
+  //パスの開始座標を指定する
+  context.moveTo(100,20);
+  //座標を指定してラインを引いていく
+  context.lineTo(150,100);
+  context.lineTo(50,100);
+
+  //パスを閉じる（最後の座標から開始座標に向けてラインを引く）
+  context.closePath();
+  //現在のパスを輪郭表示する
+  context.stroke();
+}
+</script>
+</head>
+<body>
+<h2>Canvasで図形を描く</h2>
+<canvas width="300" height="150" id="sample" style="background-color:yellow;">
+canvas is not supported
+</canvas>
+</body>
+</html>
