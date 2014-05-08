@@ -25,8 +25,8 @@ function draw(ctx) {
   ctx.lineTo(centerX ,2 * unit + centerY);
   ctx.stroke();
 
-  ctx.moveTo(centerX + unit * root3, centerY - unit * 2 + unit);
-  ctx.lineTo(centerX - unit * root3, centerY - unit * 2 + unit * 3);
+  ctx.moveTo(centerX + unit * root3, centerY - unit);
+  ctx.lineTo(centerX - unit * root3, centerY + unit);
   ctx.stroke();
 
   ctx.moveTo(centerX - unit * root3, centerY - unit * 2 + unit);
