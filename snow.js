@@ -2,15 +2,16 @@ var theta = 0.0;
 var canvasWith = 600;
 var canvasHeight = 600;
 
-var unit = canvasHeight / 4;
+var unit = (canvasHeight / 4) * 0.8;
 var centerX = canvasWith / 2;
 var centerY = canvasHeight / 2;
-var baseY = 0;
+var baseY = centerY - unit * 2;
 var root3 = 1.73205;
 
 function draw(ctx) {
 
   //輪郭
+  
   ctx.moveTo(centerX,  baseY);
   ctx.lineTo(centerX + unit * root3, baseY + unit);
   ctx.lineTo(centerX + unit * root3, baseY + 3 * unit);
@@ -61,7 +62,7 @@ var loop = function(ctx, fps) {
     theta = 0;
   }
 
-  //setTimeout(function(){loop(ctx,fps);}, fps.getInterval());
+  setTimeout(function(){loop(ctx,fps);}, fps.getInterval());
 };
 
 var FPS = function(target) {
