@@ -14,14 +14,14 @@ function drawHex(ctx, unit) {
 
   var dx = unit * root3;
   var dxs = [0,1,1,0,-1,-1,0];
-
-  ctx.moveTo(centerX + dx * dxs[0], centerY - 2 * unit);
-  ctx.lineTo(centerX + dx * dxs[1], centerY - 1 * unit);
-  ctx.lineTo(centerX + dx * dxs[2], centerY + 1 * unit);
-  ctx.lineTo(centerX + dx * dxs[3], centerY + 2 * unit);
-  ctx.lineTo(centerX + dx * dxs[4], centerY + 1 * unit);
-  ctx.lineTo(centerX + dx * dxs[5], centerY - 1 * unit);
-  ctx.lineTo(centerX + dx * dxs[6], centerY - 2 * unit);
+  var dys = [-2,-1,1,2,1,-1,-2];
+  ctx.moveTo(centerX + dx * dxs[0], centerY + unit * dys[0]);
+  ctx.lineTo(centerX + dx * dxs[1], centerY + unit * dys[1]);
+  ctx.lineTo(centerX + dx * dxs[2], centerY + unit * dys[2]);
+  ctx.lineTo(centerX + dx * dxs[3], centerY + unit * dys[3]);
+  ctx.lineTo(centerX + dx * dxs[4], centerY + unit * dys[4]);
+  ctx.lineTo(centerX + dx * dxs[5], centerY + unit * dys[5]);
+  ctx.lineTo(centerX + dx * dxs[6], centerY + unit * dys[6]);
 
   ctx.strokeStyle = "rgb(200,200,255)";
   ctx.stroke();
