@@ -19,7 +19,7 @@ function drawHex(ctx, unit) {
    [ 0, 2],
    [-1, 1],
    [-1,-1],
-   [ 0, -2]
+   [ 0,-2]
   ];
 
   ctx.moveTo(centerX + dx * delta[5][0], centerY + unit * delta[5][1]);
