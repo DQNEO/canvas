@@ -2,12 +2,14 @@ var theta = 0.0;
 var canvasWith = 600;
 var canvasHeight = 400;
 
+var unit = 100;
+var baseX = canvasWith / 2;
+var baseY = 0;
+var root3 = 1.73205
+
 function draw(ctx) {
 
-  var unit = 100;
-  var baseX = canvasWith / 2;
-  var baseY = 0;
-  var root3 = 1.73205
+
   ctx.moveTo(baseX,  0);
   ctx.lineTo(baseX + unit * root3, baseY + unit);
   ctx.lineTo(baseX + unit * root3, baseY + 3 * unit);
