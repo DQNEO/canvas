@@ -21,8 +21,8 @@ function draw(ctx) {
   ctx.stroke();
 
   //対角線
-  ctx.moveTo(centerX, centerY - unit * 2);
-  ctx.lineTo(centerX ,unit * 4 + centerY - unit * 2);
+  ctx.moveTo(centerX, centerY - 2 * unit);
+  ctx.lineTo(centerX ,2 * unit + centerY);
   ctx.stroke();
 
   ctx.moveTo(centerX + unit * root3, centerY - unit * 2 + unit);
