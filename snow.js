@@ -4,6 +4,7 @@ var canvasHeight = 400;
 
 var unit = 100;
 var centerX = canvasWith / 2;
+var centerY = canvasHeight / 2;
 var baseY = 0;
 var root3 = 1.73205;
 
