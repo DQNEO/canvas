@@ -10,31 +10,26 @@ var root3 = 1.73205;
 var rotateFlag = true;
 rotateFlag = false;
 
+function drawHex(ctx, unit) {
+  ctx.moveTo(centerX,  centerY - 2 * unit);
+  ctx.lineTo(centerX + unit * root3, centerY - unit);
+  ctx.lineTo(centerX + unit * root3, centerY + unit);
+  ctx.lineTo(centerX, centerY + unit * 2);
+  ctx.lineTo(centerX - unit * root3, centerY + unit);
+  ctx.lineTo(centerX - unit * root3, centerY - unit);
+  ctx.lineTo(centerX,   centerY - 2 * unit);
+  ctx.strokeStyle = "rgb(200,200,255)";
+  ctx.stroke();
+
+}
+
 function draw(ctx) {
 
   //多角形
-  var outlineUnit = unit * 0.6;
-  ctx.moveTo(centerX,  centerY - 2 * outlineUnit);
-  ctx.lineTo(centerX + outlineUnit * root3, centerY - outlineUnit);
-  ctx.lineTo(centerX + outlineUnit * root3, centerY + outlineUnit);
-  ctx.lineTo(centerX, centerY + outlineUnit * 2);
-  ctx.lineTo(centerX - outlineUnit * root3, centerY + outlineUnit);
-  ctx.lineTo(centerX - outlineUnit * root3, centerY - outlineUnit);
-  ctx.lineTo(centerX,   centerY - 2 * outlineUnit);
-  ctx.strokeStyle = "rgb(200,200,255)";
-  ctx.stroke();
+  drawHex(ctx, unit * 0.6);
 
   //多角形2
-  var outlineUnit = unit * 0.2;
-  ctx.moveTo(centerX,  centerY - 2 * outlineUnit);
-  ctx.lineTo(centerX + outlineUnit * root3, centerY - outlineUnit);
-  ctx.lineTo(centerX + outlineUnit * root3, centerY + outlineUnit);
-  ctx.lineTo(centerX, centerY + outlineUnit * 2);
-  ctx.lineTo(centerX - outlineUnit * root3, centerY + outlineUnit);
-  ctx.lineTo(centerX - outlineUnit * root3, centerY - outlineUnit);
-  ctx.lineTo(centerX,   centerY - 2 * outlineUnit);
-  ctx.strokeStyle = "rgb(200,200,255)";
-  ctx.stroke();
+  drawHex(ctx, unit * 0.2);
 
   //対角線
   var diagonalUnit = unit * 1.0;
