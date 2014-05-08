@@ -1,4 +1,7 @@
 var theta = 0.0;
+var canvasWith = 600;
+var canvasHeight = 400;
+
 function draw(ctx) {
 
   var unit = 100;
@@ -85,6 +88,9 @@ FPS.prototype = {
 window.onload = function() {
 
   var canvas = document.getElementById('canvas');
+  canvas.width = canvasWith;
+  canvas.height = canvasHeight;
+
   var ctx = canvas.getContext('2d');
 
   // 30FPSでアニメーション
