@@ -14,7 +14,6 @@ function drawHex(ctx, unit) {
 
   var dx = unit * root3;
   var delta = [
-   [ 0,-2],
    [ 1,-1],
    [ 1, 1],
    [ 0, 2],
@@ -23,8 +22,8 @@ function drawHex(ctx, unit) {
    [ 0, -2]
   ];
 
-  ctx.moveTo(centerX + dx * delta[0][0], centerY + unit * delta[0][1]);
-  for (var i = 1; i<=6;i++) {
+  ctx.moveTo(centerX + dx * delta[5][0], centerY + unit * delta[5][1]);
+  for (var i = 0; i<6; i++) {
     ctx.lineTo(centerX + dx * delta[i][0], centerY + unit * delta[i][1]);
   }
 
