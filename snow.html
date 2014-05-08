@@ -22,6 +22,11 @@ window.onload = function () {
 
   //パスを閉じる（最後の座標から開始座標に向けてラインを引く）
   context.closePath();
+
+  // http://www.htmq.com/canvas/strokeStyle.shtml
+  // set color of line
+  context.strokeStyle = "rgb(0,0,255)";
+
   //現在のパスを輪郭表示する
   context.stroke();
 }
