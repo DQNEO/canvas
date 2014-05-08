@@ -43,7 +43,7 @@ window.onload = function() {
     // 30FPSでアニメーション
     var fps = new FPS(30);
 
-    var loop = function() {
+    var loop = function(ctx, fps) {
         fps.check();
 
         ctx.save();
@@ -71,10 +71,10 @@ window.onload = function() {
             theta = 0;
         }
 
-        setTimeout(loop, fps.getInterval());
+        setTimeout(function(){loop(ctx,fps);}, fps.getInterval());
     };
 
-    loop();
+    loop(ctx,fps);
 };
 </script>
 <title></title>
