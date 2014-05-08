@@ -11,13 +11,16 @@ var rotateFlag = true;
 rotateFlag = false;
 
 function drawHex(ctx, unit) {
+
+  var dx = unit * root3;
   ctx.moveTo(centerX,  centerY - 2 * unit);
-  ctx.lineTo(centerX + unit * root3, centerY - unit);
-  ctx.lineTo(centerX + unit * root3, centerY + unit);
+  ctx.lineTo(centerX + dx, centerY - unit);
+  ctx.lineTo(centerX + dx, centerY + unit);
   ctx.lineTo(centerX, centerY + unit * 2);
-  ctx.lineTo(centerX - unit * root3, centerY + unit);
-  ctx.lineTo(centerX - unit * root3, centerY - unit);
+  ctx.lineTo(centerX - dx, centerY + unit);
+  ctx.lineTo(centerX - dx, centerY - unit);
   ctx.lineTo(centerX,   centerY - 2 * unit);
+
   ctx.strokeStyle = "rgb(200,200,255)";
   ctx.stroke();
 
