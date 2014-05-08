@@ -12,8 +12,20 @@ rotateFlag = false;
 
 function draw(ctx) {
 
-  //輪郭
+  //多角形
   var outlineUnit = unit * 0.6;
+  ctx.moveTo(centerX,  centerY - 2 * outlineUnit);
+  ctx.lineTo(centerX + outlineUnit * root3, centerY - outlineUnit);
+  ctx.lineTo(centerX + outlineUnit * root3, centerY + outlineUnit);
+  ctx.lineTo(centerX, centerY + outlineUnit * 2);
+  ctx.lineTo(centerX - outlineUnit * root3, centerY + outlineUnit);
+  ctx.lineTo(centerX - outlineUnit * root3, centerY - outlineUnit);
+  ctx.lineTo(centerX,   centerY - 2 * outlineUnit);
+  ctx.strokeStyle = "rgb(200,200,255)";
+  ctx.stroke();
+
+  //多角形2
+  var outlineUnit = unit * 0.2;
   ctx.moveTo(centerX,  centerY - 2 * outlineUnit);
   ctx.lineTo(centerX + outlineUnit * root3, centerY - outlineUnit);
   ctx.lineTo(centerX + outlineUnit * root3, centerY + outlineUnit);
