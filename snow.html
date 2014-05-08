@@ -11,28 +11,52 @@ window.onload = function () {
   //描画コンテキストの取得
   var context = canvas.getContext('2d');
 
-  context.beginPath();
-  context.moveTo(200,000);
-  context.lineTo(200,400);
-  context.closePath();
+　
+  //対角線
   context.strokeStyle = "rgb(100,100,255)";
+  context.beginPath();
+  context.moveTo(300,000);
+  context.lineTo(300,400);
+  context.closePath();
   context.stroke();
 
+  context.strokeStyle = "rgb(100,100,255)";
   context.beginPath();
-  context.moveTo(0,  200);
-  context.lineTo(400,200);
+  context.moveTo(300 + 173,100);
+  context.lineTo(300 - 173,300);
   context.closePath();
+  context.stroke();
+
+  context.strokeStyle = "rgb(100,100,255)";
+  context.beginPath();
+  context.moveTo(300 - 173,100);
+  context.lineTo(300 + 173,300);
+  context.closePath();
+  context.stroke();
+
+  //輪郭
+  context.beginPath();
+  context.moveTo(300,  0);
+  context.lineTo(300 + 173, 100);
+  context.lineTo(300 + 173, 300);
+  context.lineTo(300, 400);
+
+  context.lineTo(300 -173, 300);
+  context.lineTo(300 -173, 100);
+  context.lineTo(300,   0);
+
+  context.closePath();
+
 /*
 */
   context.strokeStyle = "rgb(100,100,255)";
 
-  //現在のパスを輪郭表示する
   context.stroke();
 }
 </script>
 </head>
 <body>
-<canvas width="600" height="600" id="sample" style="background-color:black;">
+<canvas width="600" height="400" id="sample" style="background-color:black;">
 canvas is not supported
 </canvas>
 </body>
