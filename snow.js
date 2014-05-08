@@ -38,10 +38,10 @@ function draw(ctx) {
   drawHex(ctx, unit * 0.6);
 
   //多角形2
-  drawHex(ctx, unit * 0.2);
+  drawHex(ctx, unit * 0.5);
 
   //対角線
-  var diagonalUnit = unit * 1.0;
+  var diagonalUnit = unit * 1.1;
   ctx.strokeStyle = "rgb(100,100,255)";
   ctx.moveTo(centerX, centerY - 2 * diagonalUnit);
   ctx.lineTo(centerX ,2 * diagonalUnit + centerY);
