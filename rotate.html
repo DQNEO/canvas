@@ -9,8 +9,6 @@ canvas {
 </style>
 <script>
 var theta = 0.0;
-var rectWidth = 100;
-var rectHeight = 50;
 var loop = function(ctx, fps) {
     fps.check();
 
@@ -27,8 +25,23 @@ var loop = function(ctx, fps) {
     // 元の場所に戻す
     ctx.translate(canvas.width / 2, canvas.height / 2);
     ctx.rotate(theta);
-    ctx.translate(-rectWidth / 2, -rectHeight / 2);
-    ctx.fillRect(0, 0, rectWidth, rectHeight);
+    ctx.translate(-canvas.width / 2, -canvas.height / 2);
+
+  var unit = 100;
+  var baseX = 300;
+  var baseY = 0;
+  var root3 = 1.73205
+
+  ctx.moveTo(baseX,  0);
+  ctx.lineTo(baseX + unit * root3, baseY + unit);
+  ctx.lineTo(baseX + unit * root3, baseY + 3 * unit);
+  ctx.lineTo(baseX, baseY + 4 * unit);
+
+  ctx.lineTo(baseX - unit * root3, baseY + 3 * unit);
+  ctx.lineTo(baseX - unit * root3, baseY + unit);
+  ctx.lineTo(baseX,   0);
+  ctx.strokeStyle = "rgb(100,100,255)";
+  ctx.stroke();
 
     ctx.restore();
 
