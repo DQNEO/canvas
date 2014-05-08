@@ -17,29 +17,25 @@ window.onload = function () {
   var baseY = 0;
   var root3 = 1.73205
   //対角線
-  ctx.strokeStyle = "rgb(100,100,255)";
+
   ctx.beginPath();
+
+  ctx.strokeStyle = "rgb(100,100,255)";
   ctx.moveTo(baseX, baseY);
   ctx.lineTo(baseX ,unit * 4 + baseY);
-  ctx.closePath();
   ctx.stroke();
 
   ctx.strokeStyle = "rgb(100,100,255)";
-  ctx.beginPath();
   ctx.moveTo(baseX + unit * root3, baseY + unit);
   ctx.lineTo(baseX - unit * root3, baseY + unit * 3);
-  ctx.closePath();
   ctx.stroke();
 
   ctx.strokeStyle = "rgb(100,100,255)";
-  ctx.beginPath();
   ctx.moveTo(baseX - unit * root3, baseY + unit);
   ctx.lineTo(baseX + unit * root3, baseY + unit * 3);
-  ctx.closePath();
   ctx.stroke();
 
   //輪郭
-  ctx.beginPath();
 
   ctx.moveTo(baseX,  0);
   ctx.lineTo(baseX + unit * root3, baseY + unit);
@@ -50,13 +46,14 @@ window.onload = function () {
   ctx.lineTo(baseX - unit * root3, baseY + unit);
   ctx.lineTo(baseX,   0);
 
+  ctx.stroke();
+
   ctx.closePath();
 
 /*
 */
   ctx.strokeStyle = "rgb(100,100,255)";
 
-  ctx.stroke();
 }
 </script>
 </head>
