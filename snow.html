@@ -11,26 +11,29 @@ window.onload = function () {
   //描画コンテキストの取得
   var context = canvas.getContext('2d');
 
-　
+  var unit = 100;
+  var baseX = 300;
+  var baseY = 0;
+  var root3 = 1.73205
   //対角線
   context.strokeStyle = "rgb(100,100,255)";
   context.beginPath();
-  context.moveTo(300,000);
-  context.lineTo(300,400);
+  context.moveTo(baseX, baseY);
+  context.lineTo(baseX ,unit * 4 + baseY);
   context.closePath();
   context.stroke();
 
   context.strokeStyle = "rgb(100,100,255)";
   context.beginPath();
-  context.moveTo(300 + 173,100);
-  context.lineTo(300 - 173,300);
+  context.moveTo(baseX + unit * root3, baseY + unit);
+  context.lineTo(baseX - unit * root3, baseY + unit * 3);
   context.closePath();
   context.stroke();
 
   context.strokeStyle = "rgb(100,100,255)";
   context.beginPath();
-  context.moveTo(300 - 173,100);
-  context.lineTo(300 + 173,300);
+  context.moveTo(baseX - unit * root3, baseY + unit);
+  context.lineTo(baseX + unit * root3, baseY + unit * 3);
   context.closePath();
   context.stroke();
 
