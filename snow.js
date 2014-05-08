@@ -5,7 +5,7 @@ var canvasHeight = 400;
 var unit = 100;
 var centerX = canvasWith / 2;
 var baseY = 0;
-var root3 = 1.73205
+var root3 = 1.73205;
 
 function draw(ctx) {
 
