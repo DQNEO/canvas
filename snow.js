@@ -39,8 +39,6 @@ var loop = function(ctx, fps) {
 
     ctx.restore();
 
-    //ctx.fillText('FPS : ' + fps.getFPS(), 10, 20);
-
     theta += 5 * Math.PI / 180;
     if(Math.PI * 2 < theta) {
         theta = 0;
