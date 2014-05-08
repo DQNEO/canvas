@@ -12,10 +12,18 @@ window.onload = function () {
   var context = canvas.getContext('2d');
 
   context.beginPath();
-  context.moveTo(100,100);
-  context.lineTo(100,200);
+  context.moveTo(200,000);
+  context.lineTo(200,400);
   context.closePath();
+  context.strokeStyle = "rgb(100,100,255)";
+  context.stroke();
 
+  context.beginPath();
+  context.moveTo(0,  200);
+  context.lineTo(400,200);
+  context.closePath();
+/*
+*/
   context.strokeStyle = "rgb(100,100,255)";
 
   //現在のパスを輪郭表示する
@@ -25,7 +33,7 @@ window.onload = function () {
 </head>
 <body>
 <h1>雪だるまつくろ</h1>
-<canvas width="500" height="500" id="sample" style="background-color:black;">
+<canvas width="400" height="400" id="sample" style="background-color:black;">
 canvas is not supported
 </canvas>
 </body>
