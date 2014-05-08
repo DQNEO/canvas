@@ -5,7 +5,7 @@ var canvasHeight = 400;
 function draw(ctx) {
 
   var unit = 100;
-  var baseX = 300;
+  var baseX = canvasWith / 2;
   var baseY = 0;
   var root3 = 1.73205
   ctx.moveTo(baseX,  0);
