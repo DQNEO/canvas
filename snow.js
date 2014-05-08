@@ -7,6 +7,9 @@ var centerX = canvasWith / 2;
 var centerY = canvasHeight / 2;
 var root3 = 1.73205;
 
+var rotateFlag = true;
+rotateFlag = false;
+
 function draw(ctx) {
 
   //輪郭
@@ -63,7 +66,9 @@ var loop = function(ctx, fps) {
     theta = 0;
   }
 
-  setTimeout(function(){loop(ctx,fps);}, fps.getInterval());
+  if (rotateFlag) {
+    setTimeout(function(){loop(ctx,fps);}, fps.getInterval());
+  }
 };
 
 var FPS = function(target) {
