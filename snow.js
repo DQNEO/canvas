@@ -10,7 +10,6 @@ var root3 = 1.73205;
 function draw(ctx) {
 
   //輪郭
-  
   ctx.moveTo(centerX,  centerY - 2 * unit);
   ctx.lineTo(centerX + unit * root3, centerY - unit);
   ctx.lineTo(centerX + unit * root3, centerY + unit);
