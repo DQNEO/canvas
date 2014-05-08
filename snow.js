@@ -18,11 +18,12 @@ function draw(ctx) {
   ctx.lineTo(centerX - outlineUnit * root3, centerY + outlineUnit);
   ctx.lineTo(centerX - outlineUnit * root3, centerY - outlineUnit);
   ctx.lineTo(centerX,   centerY - 2 * outlineUnit);
-  ctx.strokeStyle = "rgb(100,100,255)";
+  ctx.strokeStyle = "rgb(200,200,255)";
   ctx.stroke();
 
   //対角線
   var diagonalUnit = unit * 1.0;
+  ctx.strokeStyle = "rgb(100,100,255)";
   ctx.moveTo(centerX, centerY - 2 * diagonalUnit);
   ctx.lineTo(centerX ,2 * diagonalUnit + centerY);
   ctx.stroke();
